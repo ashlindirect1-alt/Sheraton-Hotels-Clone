@@ -1,0 +1,202 @@
+.confirmation-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+/* Confirmation Card */
+
+.confirmation-card {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+
+/* Success Icon */
+
+.success-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Heading */
+
+.confirmation-card h1 {
+    color: #123b5d;
+
+    margin-bottom: 10px;
+}
+
+.confirmation-message {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* Booking Information */
+
+.booking-info {
+    text-align: left;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 25px;
+}
+
+.booking-info h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Info Row */
+
+.info-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-value {
+    text-align: right;
+
+    color: #555;
+}
+
+
+/* Total */
+
+.confirmation-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #f2f5f7;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.confirmation-total .total-value {
+    color: #123b5d;
+}
+
+
+/* Buttons */
+
+.confirmation-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.confirmation-btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #123b5d;
+
+    color: white;
+}
+
+.secondary-btn {
+    background: #eee;
+
+    color: #333;
+}
+
+.primary-btn:hover {
+    background: #0d2d46;
+}
+
+
+/* Error */
+
+.confirmation-error {
+    text-align: center;
+
+    padding: 50px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .confirmation-container {
+        width: 94%;
+
+        margin: 30px auto;
+    }
+
+    .confirmation-card {
+        padding: 25px 18px;
+    }
+
+    .info-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .info-value {
+        text-align: left;
+    }
+
+    .confirmation-total {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .confirmation-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}

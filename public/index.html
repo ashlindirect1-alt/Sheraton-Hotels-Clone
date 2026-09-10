@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sheraton Hotels Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            SHERATON HOTELS
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Stays</a>
+            <a href="bookings.html">Bookings</a>
+        </nav>
+
+        <a href="signin.html" class="sign-in-btn">
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Find Your Perfect Stay
+            </h1>
+
+            <p>
+                Discover comfortable stays and unforgettable experiences.
+            </p>
+
+        </div>
+
+
+        <!-- Search Box -->
+        <div class="search-box">
+
+            <div class="search-field">
+
+                <label for="destination">
+                    Destination
+                </label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Where are you going?"
+                >
+
+            </div>
+
+
+            <div class="search-field">
+
+                <label for="checkIn">
+                    Check-in
+                </label>
+
+                <input
+                    type="date"
+                    id="checkIn"
+                >
+
+            </div>
+
+
+            <div class="search-field">
+
+                <label for="checkOut">
+                    Check-out
+                </label>
+
+                <input
+                    type="date"
+                    id="checkOut"
+                >
+
+            </div>
+
+
+            <button
+                class="search-btn"
+                onclick="searchHotels()"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Hotels -->
+    <section class="featured-section">
+
+        <div class="section-header">
+
+            <h2>
+                Featured Hotels
+            </h2>
+
+            <p>
+                Explore some of our popular stays
+            </p>
+
+        </div>
+
+
+        <div
+            id="featuredHotels"
+            class="hotel-grid"
+        >
+
+            <p>
+                Loading hotels...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Sheraton Hotels Clone. Built for CWI Task 38.
+        </p>
+
+    </footer>
+
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

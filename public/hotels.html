@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotels - Sheraton Hotels Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotels.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            SHERATON
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="hotels.html">Stays</a>
+            <a href="bookings.html">Bookings</a>
+        </nav>
+
+        <a href="signin.html" class="sign-in-btn">
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- Page Header -->
+    <section class="listing-header">
+
+        <h1>
+            Find Your Perfect Stay
+        </h1>
+
+        <p>
+            Explore our hotels and choose the best stay for you.
+        </p>
+
+    </section>
+
+
+    <!-- Search Bar -->
+    <section class="listing-search">
+
+        <div class="search-field">
+
+            <label>
+                Destination
+            </label>
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="Enter destination"
+            >
+
+        </div>
+
+
+        <div class="search-field">
+
+            <label>
+                Check-in
+            </label>
+
+            <input
+                type="date"
+                id="checkIn"
+            >
+
+        </div>
+
+
+        <div class="search-field">
+
+            <label>
+                Check-out
+            </label>
+
+            <input
+                type="date"
+                id="checkOut"
+            >
+
+        </div>
+
+
+        <button
+            class="search-btn"
+            onclick="applyFilters()"
+        >
+            Search
+        </button>
+
+    </section>
+
+
+    <!-- Main Listing Area -->
+    <main class="listing-container">
+
+        <!-- Filters -->
+        <aside class="filters">
+
+            <h2>
+                Filters
+            </h2>
+
+
+            <!-- Price -->
+            <div class="filter-group">
+
+                <h3>
+                    Maximum Price
+                </h3>
+
+                <input
+                    type="range"
+                    id="priceFilter"
+                    min="50"
+                    max="500"
+                    value="500"
+                    step="10"
+                    oninput="updatePriceLabel()"
+                >
+
+                <p>
+                    Up to $<span id="priceValue">500</span>
+                </p>
+
+            </div>
+
+
+            <!-- Rating -->
+            <div class="filter-group">
+
+                <h3>
+                    Minimum Rating
+                </h3>
+
+                <select id="ratingFilter">
+
+                    <option value="0">
+                        All Ratings
+                    </option>
+
+                    <option value="4">
+                        ⭐ 4.0+
+                    </option>
+
+                    <option value="4.5">
+                        ⭐ 4.5+
+                    </option>
+
+                    <option value="4.8">
+                        ⭐ 4.8+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Hotel Type -->
+            <div class="filter-group">
+
+                <h3>
+                    Hotel Type
+                </h3>
+
+                <select id="typeFilter">
+
+                    <option value="">
+                        All Types
+                    </option>
+
+                    <option value="Luxury">
+                        Luxury
+                    </option>
+
+                    <option value="Business">
+                        Business
+                    </option>
+
+                    <option value="Resort">
+                        Resort
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Amenities -->
+            <div class="filter-group">
+
+                <h3>
+                    Amenities
+                </h3>
+
+                <label class="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Free WiFi"
+                        class="amenity-filter"
+                    >
+                    Free WiFi
+                </label>
+
+                <label class="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Swimming Pool"
+                        class="amenity-filter"
+                    >
+                    Swimming Pool
+                </label>
+
+                <label class="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Restaurant"
+                        class="amenity-filter"
+                    >
+                    Restaurant
+                </label>
+
+                <label class="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Gym"
+                        class="amenity-filter"
+                    >
+                    Gym
+                </label>
+
+            </div>
+
+
+            <button
+                class="apply-filter-btn"
+                onclick="applyFilters()"
+            >
+                Apply Filters
+            </button>
+
+        </aside>
+
+
+        <!-- Results -->
+        <section class="results">
+
+            <div class="results-top">
+
+                <div>
+
+                    <h2>
+                        Available Hotels
+                    </h2>
+
+                    <p id="resultCount">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+                <select
+                    id="sortFilter"
+                    onchange="applyFilters()"
+                >
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Best Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="hotelResults"
+                class="hotel-results"
+            >
+
+                <p>
+                    Loading hotels...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Sheraton Hotels Clone. Built for CWI Task 38.
+        </p>
+
+    </footer>
+
+
+    <script src="js/hotels.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
